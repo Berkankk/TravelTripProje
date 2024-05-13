@@ -1,0 +1,108 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px;" >Tatil & Seyahat Bloğu </h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restoranlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacak Aktiviteler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araba Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:550px;height:250px; ">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                    <li><img src="@x.BlogImage" alt=""></li>
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Bloğuna Hoşgeldiniz!</h3>
+                    <p>
+                        Bu projeyi Mayıs 2024 tarihinde başlatıp yine Mayıs 2024 tarihinde ana sayfa düzenlemelerine getirdik. Gezilecek görülecek yerleri sizinle paylaşmak için Youtube üzerinde eğitim veren Murat Yücedağ hocamızın kodlama videosunu izleyerek yazdım. Mvc5 üzerine kurulu dinamik bir web projesi gelişttirdik. Hem Türkiye' den hem de yurt dışından gezilecek görülecek yerleri blog yazıları olarak sizinle paylaşma niyetindeyim. Umarım paylaştığım yerleri beğenirsiniz, keyifli okumalar ,mutlu günler.
+                        Ben Berkan Kara umarım bir gün denk gelir ve bu şehirler hakkında konuşuruz.
+                    </p>
+                </div>
+                
+                @Html.Action("Partial1","Default")
+                <br />
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial2","Default")
+                        @Html.Action("Partial3","Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
